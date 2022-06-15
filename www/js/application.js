@@ -1,3 +1,5 @@
+
+const nunjucks = require('nunjucks');
 function Application(UIContext) {
     this._uiContextClass = UIContext;
     this._initialized = false;
@@ -14,7 +16,7 @@ Application.prototype.init = function() {
     if (this._uiContextClass && !this._initialized) {
         this._initialized = true;
         var localNLS = getLocalNLS();
-        document.querySelector("#maincontent").innerHTML = nunjucks.render('js/views/main.html', localNLS);
+        document.querySelector("#maincontent").innerHTML = nunjucks.render('www/js/views/main.html', localNLS);
         var UI = new this._uiContextClass();
 
         UI.init();

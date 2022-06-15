@@ -14,7 +14,8 @@ window.onload = function () {
             elem.className = elem.className.replace(className, '');
         }
     };
-
+   
+    UbuntuUI = {};//what was this
     var app = new Application(UbuntuUI);
     app.init();
 
